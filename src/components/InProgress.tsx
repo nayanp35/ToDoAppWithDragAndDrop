@@ -1,5 +1,3 @@
-import React from 'react'
-
 const InProgress = () => {
   return (
     <div className="border border-black rounded-md">
@@ -8,8 +6,7 @@ const InProgress = () => {
         <div>This is actively being worked on</div>
       </div>
     </div>
+  );
+};
 
-  )
-}
-
-export default InProgress
+export default InProgress;

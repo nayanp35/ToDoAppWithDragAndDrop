@@ -6,7 +6,9 @@ export interface Todo {
   category: 'todo' | 'inProgress' | 'done';
 }
 
-const initialState = localStorage.getItem('todo') ? JSON.parse(localStorage.getItem('todo')!) : [] as Todo[];
+const initialState = localStorage.getItem('todo')
+  ? JSON.parse(localStorage.getItem('todo')!)
+  : ([] as Todo[]);
 
 const todoSlice = createSlice({
   name: 'todo',
@@ -28,7 +30,9 @@ const todoSlice = createSlice({
         id: string;
       }>
     ) {
-      const index = state.findIndex((todo: Todo) => todo.id === action.payload.id);
+      const index = state.findIndex(
+        (todo: Todo) => todo.id === action.payload.id
+      );
       state[index].category = action.payload.category;
       localStorage.setItem('todo', JSON.stringify(state));
     },

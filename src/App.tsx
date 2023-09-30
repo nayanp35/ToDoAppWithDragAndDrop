@@ -5,7 +5,7 @@ import ToDoForm from './components/ToDoForm';
 
 const App = () => {
   return (
-    <div className=''>
+    <div className="">
       <ToDoForm />
       <div className="grid grid-cols-3 gap-5 p-5">
         <ToDo />

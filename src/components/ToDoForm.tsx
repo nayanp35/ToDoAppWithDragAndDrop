@@ -10,7 +10,7 @@ const ToDoForm = () => {
     const obj: Todo = {
       category: 'inProgress',
       id: crypto.randomUUID(),
-      description: task
+      description: task,
     };
     dispatch(addTodo(obj));
     e.currentTarget.reset();
